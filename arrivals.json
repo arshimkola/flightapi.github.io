@@ -1,0 +1,34 @@
+[
+    {
+        "origin": "Sydney",
+        "flightNumber": "QF400",
+        "airline": "QANTAS Airways",
+        "arrivalTime": "14:00",
+        "terminal": "1",
+        "status": "On Time"
+    },
+    {
+        "origin": "Melbourne",
+        "flightNumber": "VA800",
+        "airline": "Virgin Australia",
+        "arrivalTime": "14:30",
+        "terminal": "2",
+        "status": "Delayed"
+    },
+    {
+        "origin": "Brisbane",
+        "flightNumber": "JQ900",
+        "airline": "Jetstar Airways",
+        "arrivalTime": "15:00",
+        "terminal": "3",
+        "status": "On Time"
+    },
+    {
+        "origin": "Perth",
+        "flightNumber": "QF700",
+        "airline": "QANTAS Airways",
+        "arrivalTime": "15:30",
+        "terminal": "1",
+        "status": "On Time"
+    }
+]

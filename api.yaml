@@ -1,0 +1,185 @@
+openapi: 3.0.0
+info:
+  title: Flight Information API
+  version: 1.0.0
+paths:
+  /flights/departures:
+    get:
+      summary: Retrieve a list of flight departures
+      parameters:
+        - name: startTime
+          in: query
+          required: false
+          schema:
+            type: string
+            format: date-time
+          description: Start time for filtering departures
+        - name: endTime
+          in: query
+          required: false
+          schema:
+            type: string
+            format: date-time
+          description: End time for filtering departures
+      responses:
+        '200':
+          description: A list of flight departures
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    destination:
+                      type: string
+                      example: "Eliwana"
+                    flightNumber:
+                      type: string
+                      example: "QG2921"
+                    airline:
+                      type: string
+                      example: "QANTAS Airways"
+                    departureTime:
+                      type: string
+                      example: "12:15"
+                    terminal:
+                      type: string
+                      example: "1"
+                    status:
+                      type: string
+                      example: "Early"
+              examples:
+                example-1:
+                  summary: Example flight departures
+                  value: 
+                    [
+                        {
+                            "destination": "Eliwana",
+                            "flightNumber": "QG2921",
+                            "airline": "QANTAS Airways",
+                            "departureTime": "12:15",
+                            "terminal": "1"
+                        },
+                        {
+                            "destination": "Paraburdoo",
+                            "flightNumber": "QG2921",
+                            "airline": "QANTAS Airways",
+                            "departureTime": "12:15",
+                            "terminal": "3"
+                        },
+                        {
+                            "destination": "Paraburdoo",
+                            "flightNumber": "NZ7523",
+                            "airline": "Air New Zealand",
+                            "departureTime": "12:15",
+                            "terminal": "3"
+                        },
+                        {
+                            "destination": "Brisbane",
+                            "flightNumber": "QF935",
+                            "airline": "QANTAS Airways",
+                            "departureTime": "12:15",
+                            "terminal": "3",
+                            "status": "Early"
+                        },
+                        {
+                            "destination": "Brisbane",
+                            "flightNumber": "AS5082",
+                            "airline": "Alaska Airlines",
+                            "departureTime": "12:15",
+                            "terminal": "2"
+                        },
+                        {
+                            "destination": "Brisbane",
+                            "flightNumber": "QF10",
+                            "airline": "QANTAS Airways",
+                            "departureTime": "12:15",
+                            "terminal": "1"
+                        }
+                    ]
+  /flights/arrivals:
+    get:
+      summary: Retrieve a list of flight arrivals
+      parameters:
+        - name: startTime
+          in: query
+          required: false
+          schema:
+            type: string
+            format: date-time
+          description: Start time for filtering arrivals
+        - name: endTime
+          in: query
+          required: false
+          schema:
+            type: string
+            format: date-time
+          description: End time for filtering arrivals
+      responses:
+        '200':
+          description: A list of flight arrivals
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    origin:
+                      type: string
+                      example: "Sydney"
+                    flightNumber:
+                      type: string
+                      example: "QF400"
+                    airline:
+                      type: string
+                      example: "QANTAS Airways"
+                    arrivalTime:
+                      type: string
+                      example: "14:00"
+                    terminal:
+                      type: string
+                      example: "1"
+                    status:
+                      type: string
+                      example: "On Time"
+              examples:
+                example-1:
+                  summary: Example flight arrivals
+                  value: 
+                    [
+                        {
+                            "origin": "Sydney",
+                            "flightNumber": "QF400",
+                            "airline": "QANTAS Airways",
+                            "arrivalTime": "14:00",
+                            "terminal": "1",
+                            "status": "On Time"
+                        },
+                        {
+                            "origin": "Melbourne",
+                            "flightNumber": "VA800",
+                            "airline": "Virgin Australia",
+                            "arrivalTime": "14:30",
+                            "terminal": "2",
+                            "status": "Delayed"
+                        },
+                        {
+                            "origin": "Brisbane",
+                            "flightNumber": "JQ900",
+                            "airline": "Jetstar Airways",
+                            "arrivalTime": "15:00",
+                            "terminal": "3",
+                            "status": "On Time"
+                        },
+                        {
+                            "origin": "Perth",
+                            "flightNumber": "QF700",
+                            "airline": "QANTAS Airways",
+                            "arrivalTime": "15:30",
+                            "terminal": "1",
+                            "status": "On Time"
+                        }
+                    ]
+

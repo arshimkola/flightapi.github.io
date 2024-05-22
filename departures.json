@@ -1,0 +1,45 @@
+[
+    {
+        "destination": "Eliwana",
+        "flightNumber": "QG2921",
+        "airline": "QANTAS Airways",
+        "departureTime": "12:15",
+        "terminal": "1"
+    },
+    {
+        "destination": "Paraburdoo",
+        "flightNumber": "QG2921",
+        "airline": "QANTAS Airways",
+        "departureTime": "12:15",
+        "terminal": "3"
+    },
+    {
+        "destination": "Paraburdoo",
+        "flightNumber": "NZ7523",
+        "airline": "Air New Zealand",
+        "departureTime": "12:15",
+        "terminal": "3"
+    },
+    {
+        "destination": "Brisbane",
+        "flightNumber": "QF935",
+        "airline": "QANTAS Airways",
+        "departureTime": "12:15",
+        "terminal": "3",
+        "status": "Early"
+    },
+    {
+        "destination": "Brisbane",
+        "flightNumber": "AS5082",
+        "airline": "Alaska Airlines",
+        "departureTime": "12:15",
+        "terminal": "2"
+    },
+    {
+        "destination": "Brisbane",
+        "flightNumber": "QF10",
+        "airline": "QANTAS Airways",
+        "departureTime": "12:15",
+        "terminal": "1"
+    }
+]
